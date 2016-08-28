@@ -1,5 +1,97 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass{sigchi}
+\pagenumbering{arabic}
+
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{url}      % llt: nicely formatted URLs
+
+\makeatletter
+\def\url@leostyle{
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={TITLE},
+pdfauthor={Azra Ismail},
+pdfkeywords={SIGCHI, proceedings},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+
+\newcommand\tabhead[1]{\small\textbf{#1}}
+
 \begin{document}
-(Type your content here.)
+
+\title{TITLE}
+
+\numberofauthors{3}
+\author{
+  \alignauthor 1st Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}
+  \alignauthor 2nd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}    
+  \alignauthor 3rd Author Name\\
+    \affaddr{Affiliation}\\
+    \affaddr{Address}\\
+    \email{e-mail address}\\
+    \affaddr{Optional phone number}
+}
+
+\maketitle
+
+\begin{abstract}
+\textcolor{red}{We present a study/examination/analysis of … 
+We do X to understand Y. 
+We highlight X, discussing Y, and conclude with Z.
+[You should write an abstract early on, knowing fully well that you will (and should) iterate through it at least 3-4 times. It is also the thing you should edit again just before you submit.]
+}
+\end{abstract}
+
+\keywords{ICTD; technology; India}
+
+\category{H.5.m.}{Information Interfaces and Presentation
+  (e.g. HCI)}{Miscellaneous} 
+
+\input{introduction.tex}
+\input{background.tex}
+\input{relatedwork.tex}
+\input{methodology.tex}
+\input{findings.tex}
+\input{discussion.tex}
+
+\section{Conclusion}
+\textcolor{red}{Say what you did. Say what you (or one) might do in the future. If you don’t want to do the latter, don’t, and then don’t have the “Future Work” in there. }
+
+\balance
+
+\bibliographystyle{acm-sigchi}
+\bibliography{references}
+http://journals.publishmed.com/index.php/JHS/article/view/110/238
+articles?
+
 \end{document}
